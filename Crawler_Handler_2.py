@@ -24,36 +24,6 @@ def ESC_Binding():
     pi.set_servo_pulsewidth(ESC_pin,0)
     print("CONNECTED SUCCESSFULY")
     
-def DanceMode():
-    print("PARTTTYYY TIME")
-    MoveServo(servo_front_left,1.5)
-    MoveServo(servo_front_right,1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_left,-1.5)
-    MoveServo(servo_front_right,-1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_left,1.5)
-    MoveServo(servo_front_right,1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_left,-1.5)
-    MoveServo(servo_front_right,-1.5)
-    time.sleep(0.3)
-    
-    MoveServo(servo_rear_right,1.5)
-    MoveServo(servo_rear_left,1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_left,1.5)
-    MoveServo(servo_front_right,1.5)
-    time.sleep(0.3)
-    MoveServo(servo_rear_right,-1.5)
-    MoveServo(servo_rear_left,-1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_left,-1.5)
-    MoveServo(servo_rear_left,-1.5)
-    time.sleep(0.3)
-    MoveServo(servo_front_right,1.5)
-    MoveServo(servo_rear_right,1.5)
-    time.sleep(0.3)
 #--------------------------------------------------------MOTOR FUNCTIONS
 def AxisToRPM_Gas(val):#throttle
     return 1560+(val+1)*70*Gear[gear_index]
